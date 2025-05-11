@@ -1,151 +1,50 @@
-# Image Uploader App with Flask + Docker (on EC2)
+# 🚀 Aditya's Project Showcase
 
-# 🖼️ Flask Image Uploader (Dockerized)
-
-A simple image upload and preview web app built using **Flask** and deployed inside a **Docker container** on an **AWS EC2 instance**. Users can upload images which are saved and displayed using HTML templates.
+Welcome to my GitHub repository! This space is where I build, break, and learn through hands-on **mini-projects** and **real-world scenarios** 💻⚙️. From version control to containerized deployments — it’s all here!
 
 ---
 
-## 🚀 Features
+## 🧩 What's Inside?
 
-- Upload images via a browser form
-- Securely save uploaded files
-- View uploaded image instantly
-- Dockerized for consistent deployment
-- Persistent image storage using EC2 volume
-
----
-
-## 🧱 Project Structure
-
-```
-
-image-uploader-app/
-├── app.py
-├── requirements.txt
-├── Dockerfile
-├── uploads/              # (Used in Docker container)
-└── templates/
-├── index.html
-└── result.html
-
-````
+✨ **Practical Projects** based on real-life use cases  
+🔁 **Version Control** with Git (branching, merging, reverting, etc.)  
+🐳 **Dockerized Apps** running on isolated containers  
+🌐 **Web Applications** hosted locally or on the cloud  
+🔍 **Debugging Logs** and learning notes from each step  
 
 ---
 
-## ⚙️ Setup Instructions (EC2 + Docker)
+## 📁 Projects Overview
 
-### 1️⃣ Create Project Folder
-
-```bash
-mkdir image-uploader-app
-cd image-uploader-app
-mkdir templates uploads
-````
-
-### 2️⃣ Add Project Files
-
-* `app.py` — \[Flask backend logic]
-* `templates/index.html` — \[Upload form]
-* `templates/result.html` — \[Image display]
-* `requirements.txt` — Add:
-
-  ```
-  Flask
-  ```
-* `Dockerfile` — Add:
-
-  ```Dockerfile
-  FROM python:3.10
-
-  WORKDIR /app
-
-  COPY . .
-
-  RUN pip install -r requirements.txt
-
-  RUN mkdir -p /app/uploads
-
-  CMD ["python", "app.py"]
-  ```
+| 📦 Project | 📄 Description | 🧰 Tech Stack |
+|-----------|----------------|---------------|
+| `📸 image-uploader` | Flask app to upload & display images | Flask, Docker, HTML |
+| `🔀 git-practice` | Git command simulations (branch, merge, revert) | Git, CLI |
+| `📦 docker-deploy` | Deploying Flask app in Docker container | Docker, Python |
+| `☁️ aws-labs` | Docker setup on AWS EC2 | AWS EC2, Docker |
 
 ---
 
-## 🐳 Docker Build & Run (With Persistent Volume)
+## 🎯 Learning Goals
 
-### 3️⃣ Build the Docker Image
-
-```bash
-docker build -t image-uploader-app .
-```
-
-### 4️⃣ Create Persistent Uploads Folder on EC2
-
-```bash
-mkdir ~/image-uploads
-```
-
-### 5️⃣ Run the Container
-
-```bash
-docker run -d \
-  -p 5000:5000 \
-  --name uploader-cont \
-  -v ~/image-uploads:/app/uploads \
-  image-uploader-app
-```
+✅ Get comfortable with `git push`, `pull`, `merge`, `branch` and more  
+✅ Containerize Python apps with Docker 🐳  
+✅ Solve port conflicts and internal server errors 🚧  
+✅ Launch services on the cloud ☁️ (like EC2)
 
 ---
 
-## 🌐 Access the App
+## 🛠️ Setup & How to Use
 
-1. Make sure **port 5000** is open in your EC2 Security Group
-2. Visit in your browser:
-
-   ```
-   http://<your-ec2-public-ip>:5000
-   ```
+1. Clone this repo  
+   ```bash
+   git clone https://github.com/Adyaa12
 
 ---
+## 🤝 Let's Connect
 
-## 📁 Uploaded Image Storage
-
-* All uploaded images are saved to:
-
-  ```
-  ~/image-uploads
-  ```
-* These persist even if the container is stopped or rebuilt
-
----
-
-## 📌 Notes
-
-* To stop container:
-
-  ```bash
-  docker stop uploader-cont
-  ```
-
-* To delete container:
-
-  ```bash
-  docker rm uploader-cont
-  ```
-
-* To rebuild after changes:
-
-  ```bash
-  docker build -t image-uploader-app .
-  ```
-
----
-
-## 🧑‍💻 Author
-
-**Aditya**
-Built and deployed using Flask + Docker on AWS EC2 🚀
-
-```
+- 🌐 [GitHub](https://github.com/Adyaa12)  
+- 💼 [LinkedIn](https://www.linkedin.com/in/aditya-mane-6734261a3/)  
+- 📸 [Instagram](https://www.instagram.com/official_adi_m/)
 
 
